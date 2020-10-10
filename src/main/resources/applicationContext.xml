@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <bean id="beanPostProcessor" class="com.example.demo.bean.MyBeanPostProcessor"></bean>
+
+    <bean id="instantiationAwareBeanPostProcessor" class="com.example.demo.bean.MyInstantiationAwareBeanPostProcessor"></bean>
+
+    <bean id="beanFactoryPostProcessor" class="com.example.demo.bean.MyBeanFactoryPostProcessor">
+    </bean>
+	<bean id="student" class="com.example.demo.bean.Student">
+		<constructor-arg name="person" ref="person"/>
+	</bean>
+    <bean id="person" class="com.example.demo.bean.Person" init-method="myInit"
+          destroy-method="myDestory" scope="singleton" p:name="张三" p:address="广州"
+          p:phone="1222"> 
+          <constructor-arg name="province" value="上海"></constructor-arg>
+    </bean>
+	
+	
+</beans>
