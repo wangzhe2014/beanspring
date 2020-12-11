@@ -10,4 +10,8 @@ public class Test1 {
         System.out.println("8881");
         System.out.println("12");
     }
+
+    public void test2() {
+
+    }
 }
