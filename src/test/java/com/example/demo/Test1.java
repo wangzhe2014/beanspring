@@ -12,4 +12,8 @@ public class Test1 {
         System.out.println("13");
 
     }
+
+    public void test2() {
+
+    }
 }
