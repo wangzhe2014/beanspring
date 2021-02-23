@@ -12,7 +12,7 @@ public class Test {
 	public static void quick(int[] arr, int low, int high) {
 		System.out.println("low:" + low + ", high:" + high);
 		if (low < high) {
-			//寻找基准位置的索引
+			//寻找基准位置的索引2
 			int index = getIndex(arr, low, high);
 			
 			//递归左右循环扫描
